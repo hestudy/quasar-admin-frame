@@ -19,6 +19,7 @@ module.exports = function (/* ctx */) {
     // https://quasar.dev/quasar-cli/boot-files
     boot: [
       'i18n',
+      'asyncRouter',
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
@@ -81,7 +82,13 @@ module.exports = function (/* ctx */) {
     framework: {
       iconSet: 'material-icons', // Quasar icon set
       lang: 'zh-hans', // Quasar language pack
-      config: {},
+      config: {
+        loadingBar: {
+          color: 'negative',
+          size: '3px',
+          position: 'top'
+        }
+      },
 
       // Possible values for "importStrategy":
       // * 'auto' - (DEFAULT) Auto-import needed Quasar components & directives
@@ -89,7 +96,11 @@ module.exports = function (/* ctx */) {
       importStrategy: 'auto',
 
       // Quasar plugins
-      plugins: []
+      plugins: [
+        'LoadingBar',
+        'Notify',
+        'LocalStorage'
+      ]
     },
 
     // animations: 'all', // --- includes all animations

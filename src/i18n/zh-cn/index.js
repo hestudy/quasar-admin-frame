@@ -1,4 +1,19 @@
 export default {
-  failed: '操作失败',
-  success: '操作成功'
+  login:{
+    title:'XX后台管理',
+    login:'登陆',
+    userNameLabel:'用户名',
+    passwordLabel:'密码',
+    userNameInputWarn:'请输入用户名',
+    passwordInputWarn:'请输入密码',
+    numberInputWarn:'不少于四位数',
+  },
+  home:{
+    title:'首页'
+  },
+  usermanage:{
+    usermanage:'用户管理',
+    permissionmanage:'权限管理',
+    user:'用户'
+  }
 }

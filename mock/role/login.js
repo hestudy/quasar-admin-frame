@@ -1,15 +1,14 @@
 const Mock = require('mockjs')
+const { uid } = require('quasar')
 
 module.exports = [
   {
-    url: '/test',
-    type: 'get',
+    url: '/login',
+    type: 'post',
     response: config=>{
       return {
         status: 0,
-        data: {
-          message:'success'
-        }
+        token:config.body.username+'-'+uid()
       }
     }
   }
