@@ -9,7 +9,13 @@ export default {
     numberInputWarn:'不少于四位数',
   },
   home:{
-    title:'首页'
+    title:'首页',
+    userCount:'总用户数量',
+    userOnlineToDay:'今日在线用户数量',
+    payCount:'订单总数',
+    payToday:'今日订单数',
+    userOnlineChart:'每日用户在线图表',
+    payChart:'每日订单图表',
   },
   usermanage:{
     usermanage:'用户管理',

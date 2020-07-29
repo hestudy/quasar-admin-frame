@@ -1,6 +1,6 @@
 <template>
   <q-list bordered class="rounded-borders">
-    <template v-for="item in routerList">
+    <template v-for="item in $store.getters['user/getRouter']">
       <SideBarItem :item="item" />
     </template>
   </q-list>
@@ -16,14 +16,14 @@
     },
     data(){
       return{
-        routerList:[]
+
       }
     },
     methods:{
 
     },
     mounted() {
-      this.routerList = this.$store.getters['user/getRouter']
+
     }
   }
 </script>

@@ -55,7 +55,8 @@
         this.$router.replace('/')
       },
       changeLanguage(){
-
+        this.$i18n.locale = this.language
+        this.$store.dispatch("user/resetRouter")
       }
     },
     mounted() {
