@@ -1,5 +1,14 @@
 # 正在开发中
 
+> 本项目基于quasar开发，目的是实现一个快速搭建且可二次开发的后台管理框架
+
+## 开发计划
+
+- [x] 动态权限路由
+- [x] 国际化
+- [x] 本地的mock服务
+- [ ] ...
+
 # Quasar App (quasar-admin-frame)
 
 A Quasar Framework app
