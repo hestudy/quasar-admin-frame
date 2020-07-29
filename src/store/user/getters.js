@@ -1,6 +1,7 @@
 import { LocalStorage } from 'quasar'
 
 export function getToken(state) {
+  console.log(LocalStorage.getItem('token'))
   return LocalStorage.getItem('token')
 }
 

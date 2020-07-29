@@ -35,3 +35,14 @@ export function setRouter(context,routes) {
     }
   })
 }
+
+export function removeToken(context) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      await context.commit('REMOVE_TOKEN')
+      resolve()
+    }catch (e) {
+      reject(e)
+    }
+  })
+}

@@ -41,7 +41,6 @@
 
 <script>
   import {login} from "../api/login";
-  import {test} from "../api/test";
 
   export default {
     name: "Run",
@@ -61,7 +60,7 @@
         })
       },
       vLogin(){
-        if(this.$store.getters['user/getToken']!==null){
+        if(this.$q.localStorage.getItem('token')!==null){
           this.$router.replace({name:'Home'})
         }
       }

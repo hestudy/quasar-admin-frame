@@ -32,3 +32,14 @@ export function SET_ROUTER(state,routes) {
     }
   })
 }
+
+export function REMOVE_TOKEN(state) {
+  return new Promise(async (resolve,reject)=>{
+    try {
+      await LocalStorage.remove("token");
+      resolve()
+    }catch (e) {
+      reject(e)
+    }
+  })
+}

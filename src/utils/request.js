@@ -1,5 +1,6 @@
 import Axios from 'axios'
 import { Notify } from 'quasar'
+import Store from "src/store";
 
 let instance = Axios.create({
   baseURL: '/dev-api', // url = base url + request url
@@ -10,7 +11,10 @@ let instance = Axios.create({
 //  请求拦截
 instance.interceptors.request.use(
   config => {
-
+    let token = Store.getters['user/getToken']
+    if(token!==''){
+      config.headers.token = token
+    }
     return config
   },
   err => {

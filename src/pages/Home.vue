@@ -1,11 +1,18 @@
 <template>
+  <MainPage>
 
+  </MainPage>
 </template>
 
 <script>
-    export default {
-        name: "Home"
+  import MainPage from "./usermanage/MainPage";
+
+  export default {
+    name: "Home",
+    components:{
+      'MainPage':MainPage
     }
+  }
 </script>
 
 <style scoped>
